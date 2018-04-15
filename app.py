@@ -4,7 +4,7 @@ import os
 
 app=Flask(__name__)
 
-bc = blockchain("http://0.0.0.0:5000")
+bc = blockchain("http://stackunderflow.net")
 
 
 @app.route("/", methods=["GET"])
