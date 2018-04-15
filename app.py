@@ -51,3 +51,7 @@ def length():
     global bc
     return str(bc.length())
 
+@app.route("/su.png")
+def pic():
+    root_dir = os.getcwd()
+    return send_from_directory(root_dir, "su.png")
