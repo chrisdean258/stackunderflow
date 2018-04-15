@@ -21,7 +21,6 @@ def ledger():
 @app.route("/post", methods = ['POST'])
 def post():
     global bc
-    print(request.form)
     required_fields = [ "sender", "message" ]
     for field in required_fields:
         if field not in request.form:

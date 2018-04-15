@@ -3,7 +3,7 @@ import requests
 import sys
 import json
 
-url="http://0.0.0.0:5000"
+url="http://0.0.0.0"
 ledgerfile = "ledger.json"
 blocks = []
 #request = requests.post(url + "/post", data = { "message" : "hi\n{\ntest\n}", "tags": "tags", "sender":"from" , "ref":14})

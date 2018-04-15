@@ -1,8 +1,8 @@
 #!/bin/bash
 export FLASK_APP=app.py
 export FLASK_DEBUG=1
-#export LANG=C.UTF-8
-#export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
 
 pkill -9 flask
 pkill -9 python
