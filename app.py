@@ -4,35 +4,50 @@ import os
 
 app=Flask(__name__)
 
-bc = blockchain()
+bc = blockchain("http://0.0.0.0:5000")
 
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def index():
     return "Welcome to Stackunderflow"
 
-@app.route("/ledger")
+@app.route("/ledger", methods=["GET"])
 def ledger():
     global bc
-    bc.update_ledger()
+    bc.write_ledger()
     root_dir = os.getcwd()
-    print(root_dir)
     return send_from_directory(root_dir, "ledger.json")
 
-@app.route("/newpost", methods = ['POST'])
-def newpost():
+@app.route("/post", methods = ['POST'])
+def post():
     global bc
     print(request.form)
-    required_fields = [ "sender", "message", "tags" ]
+    required_fields = [ "sender", "message" ]
     for field in required_fields:
         if field not in request.form:
-            return ("not implemented", 400)
+            return ("Needs: sender, message, tags, ref or title", 400)
 
-    bc.add_post(request.form["sender"], request.form["message"], request.form["tags"])
-    print(bc.blocks)
+    if not ("title" in request.form and "tags" in request.form) and "ref" not in request.form:
+        return ("Needs: sender, message, ref or title and tags", 400)
 
-    return "Not implemented"
+    if "title" in request.form:
+        bc.add_post(request.form["sender"], request.form["message"], request.form["tags"], title=request.form["title"])
 
-@app.route("/respond", methods = ['POST'])
+    if "ref" in request.form:
+        bc.add_post(request.form["sender"], request.form["message"], ref=request.form["ref"])
+
+    return ("", 204)
+
+@app.route("/register", methods = ['POST'])
 def respond():
-    return "Not implemented"
+    global bc
+    if "url" not in request.form:
+        return ("No url found to register", 400)
+    bc.register(self.form["url"])
+
+
+@app.route("/length", methods = ['GET'])
+def length():
+    global bc
+    return str(bc.length())
+
