@@ -9,7 +9,8 @@ bc = blockchain("http://stackunderflow.net")
 
 @app.route("/", methods=["GET"])
 def index():
-    return "Welcome to Stackunderflow"
+    root_dir = os.getcwd()
+    return send_from_directory(root_dir, "index.html")
 
 @app.route("/ledger", methods=["GET"])
 def ledger():
