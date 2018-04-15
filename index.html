@@ -1,55 +1,110 @@
 <!DOCTYPE html>
 <html>
-<title>Stack Underflow</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
+  <title>Stack Underflow</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
-</style>
-<body>
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px">
-  <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="su.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+  </style>
+  <body>
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#" class="w3-bar-item w3-button">More to come later</a>
+          </div>
+        </div>
+        <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+      </div>
     </div>
-  </div>
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">Stack Underflow</h2>
-    <p class="w3-opacity"><i>Blockchain powered code help</i></p>
-    <p class="w3-justify">Stack Underflow is a blockchain powered code forum. For so long many people have been dependant on large coorporations running servers and databases for forums to exeist. But with stack underflow blockchain allows the everyday person to host their own server and have it connected to the entire chain of servers to get high quality code help fast.</p>
-<!-- End Page Content -->
-</div>
-<!-- Add Google Maps -->
-<script>
-// Automatic Slideshow - change image every 4 seconds
+    <!-- Page content -->
+    <table style="width:100%">
+      <tr>
+        <td style="width:33%">
+          <div class="w3-content" style="max-width:2000px">
+            <!-- Automatic Slideshow Images -->
+            <div class="mySlides w3-display-container w3-center">
+              <img src="su.png" style="width:100%">
+              <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+            <h2 class="w3-wide">Stack Underflow</h2>
+            <p class="w3-opacity"><i>Blockchain powered code help</i></p>
+            <p class="w3-justify">Stack Underflow is a blockchain powered code forum. For so long many people have been dependant on large coorporations running servers and databases for forums to exeist. But with stack underflow blockchain allows the everyday person to host their own server and have it connected to the entire chain of servers to get high quality code help fast.</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div class="w3-black" id="about">
+      <div class="w3-container w3-content w3-padding-64" >
+        <h2 class="w3-wide w3-center">ABOUT</h2>
+        <p class="w3-opacity w3-center"><i>Tell me about Stack Undeflow</i></p><br>
+
+        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+          <div class="w3-fourth w3-margin-bottom">
+            <div class="w3-container w3-white">
+              <p><b>What is stack overflow?</b></p>
+              <p>Stack Underflow is the result of Christopher Dean's work at Crimsonhacks 2018. It is a command line tool for getting help with code but can also act as a general forum.</p>
+            </div>
+          </div>
+          <div class="w3-fourth w3-margin-bottom">
+            <div class="w3-container w3-white">
+              <p><b>What is Blockchain?</b></p>
+              <p>Blockchain is a relatively new technology used for large data storage. It is a distributed system with algorithms to sync updates between different servers and users. It also contains built in mechanisms to prevent changes to data and to verify the identity of those who post.</p>
+            </div>
+          </div>
+          <div class="w3-fourth w3-margin-bottom">
+            <div class="w3-container w3-white">
+              <p><b>Why use Blockchain?</b></p>
+              <p>Blockchain provides the opportunity to get away from a traditional server database structure, opting for more distributed approaches</p>
+            </div>
+          </div>
+          <div class="w3-fourth w3-margin-bottom">
+            <div class="w3-container w3-white">
+              <p><b>What did I learn?</b></p>
+              <p>This project was my first attempt at learning blockchain. Mainly it was just a hope that I would be able to successfully build a system that used blockchain.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
 var myIndex = 0;
 carousel();
 function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 4000);    
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
 }
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 // When the user clicks anywhere outside of the modal, close it
 var modal = document.getElementById('ticketModal');
@@ -58,6 +113,6 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-</script>
-</body>
+    </script>
+  </body>
 </html>
