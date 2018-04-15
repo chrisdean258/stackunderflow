@@ -4,6 +4,7 @@ import sys
 import json
 
 url="http://stackunderflow.net"
+url="http://35.185.126.255"
 ledgerfile = "ledger.json"
 blocks = []
 #request = requests.post(url + "/post", data = { "message" : "hi\n{\ntest\n}", "tags": "tags", "sender":"from" , "ref":14})
